@@ -93,12 +93,17 @@ Output would be:
 
 10. Troubleshooting   
 ```
-	
+#Sourced from #https://github.com/vsdip/vsd-riscv
+-edgeai
+
 Issue Port 6080 does not appear	
 Solution Wait for setup to complete (~2–3 min). Refresh PORTS tab.  
 
-noVNC window is blank	Refresh browser tab or reopen from PORTS list.
-FreedomStudio not found	Run setup manually or restart Codespace.  
+noVNC window is blank
+Refresh browser tab or reopen from PORTS list.  
+
+FreedomStudio not found	Run 
+setup manually or restart Codespace.  
 
 Workspace prompt reappears each time	  
 Select "Use this as default and do not ask again" before launching.</details>   
