@@ -73,7 +73,8 @@ Output would be:
 
 7. Once the session gets connected and opened, go to the freedom studio folder present in the homepage, and open Freedom Studio from there, I had modified the workspace directory, to the default `/home/vscode/Desktop`. 
 
-![add a caption ](Related%20Files/Images%20used%20for%20docs/1.6.png) 
+![add a caption ](Related%20Files/Images%20used%20for%20docs/1.6.png)   
+
 ![add a caption ](Related%20Files/Images%20used%20for%20docs/1.7.png)  
 
 8. After exploring the option select I'm done here, take me to the workbench and we will proceed with our second part of this section where we will make example project in the eclipse IDE.    
