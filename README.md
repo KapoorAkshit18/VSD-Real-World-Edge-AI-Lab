@@ -91,7 +91,8 @@ Output would be:
 * All files in /home/vscode/Desktop persist while the Codespace is active.
 * If the desktop view appears blank, refresh the noVNC tab once after the Codespace boots.  
 
-10. Troubleshooting   
+10. Troubleshooting     
+
 ```
 #Sourced from #https://github.com/vsdip/vsd-riscv
 -edgeai
@@ -113,6 +114,7 @@ Select "Use this as default and do not ask again" before launching.</details>
 ---  
   
  2. Example project on the Eclipse IDE. 
+(coming soon) 
   
 
 
