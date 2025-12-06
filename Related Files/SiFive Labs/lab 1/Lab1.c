@@ -17,7 +17,7 @@ include <stdio.h>
 
 // predict function
 float predict (float inp1, float inp2, float inp3){
-	return x1*inp1 + x*inp2 + x3* inp3 + b;
+	return x1*inp1 + x2*inp2 + x3* inp3 + b;
 }
 
 void print_float(float val)   // directly cannot print so, this function
@@ -37,7 +37,7 @@ float r0Spend=165349.2f;  // from csv of startup
         float a0Spend= 136897.8f;
         float mKSpend=471784.1f;
         float profit;
-        profit=predict(r0Spend,aDSpend,mKSpend);
+        profit=predict(r0Spend,a0Spend,mKSpend);
         printf("profit is :- %f", profit);
         //return
         return 0;
