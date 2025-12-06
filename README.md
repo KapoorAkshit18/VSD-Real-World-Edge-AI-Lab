@@ -46,9 +46,10 @@ Freedom Studio = SiFive’s official Eclipse-based IDE for RISC-V programming an
 
 1. Setting Up the Environment.
 
-I have used GitHub codespace for cloud based lab. The steps are simple as follows:
+We used GitHub codespace for cloud based lab. The steps are simple as follows:
 
-	1.Open the git hub linke by vsd (`https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Fvsdip%2Fvsd-riscv-edgeai&sa=D&source=calendar&usd=2&usg=AOvVaw20wToBO54VOtgHuwE3Bo2n`)
+	1.Open the git hub link provided by svsd: 
+	https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Fvsdip%2Fvsd-riscv-edgeai&sa=D&source=calendar&usd=2&usg=AOvVaw20wToBO54VOtgHuwE3Bo2n
 	2.Click on green code button and find out the create codespace on main option.
 	3.Wait for a few seconds and VSCode like tab will open.
 	4. Now find the Internet symbol within Ports and forwarded address so, to open noVNC 	   Desktop.
@@ -115,7 +116,7 @@ Select "Use this as default and do not ask again" before launching.</details>
 ---  
   
  2. Example project on the Eclipse IDE. 
-(coming soon) 
+(coming soon), feel free to explore other project related directories present here.
   
 
 
