@@ -26,6 +26,17 @@ Challenges:
 <summary>
     
 about the VSD Squadron mini and Pro Boards</summary>  
+  
+| Feature          | VSDSquadron Mini                         | VSDSquadron Pro                              |
+|------------------|-------------------------------------------|-----------------------------------------------|
+| **SoC / Chip**   | CH32V003F4U6 (RV32EC ISA)                 | SiFive FE310-G002 (RV32IMAC ISA)              |
+| **Clock Speed**  | 24 MHz                                    | 320 MHz                                       |
+| **SRAM**         | 2 KB                                      | 16 KB Data + 16 KB Instruction Cache          |
+| **Flash Memory** | 16 KB (Internal)                          | 32 Mbit / 4 MB (External Flash Chip)          |
+| **Digital I/O**  | 15 GPIO Pins                              | 19 GPIO Pins                                  |
+| **PWM Pins**     | Not specified in summary (available)      | 9 PWM-capable Pins                            |
+| **IDE / Software** | PlatformIO (VSCode)                     | Freedom Studio (RISC-V GCC Toolchain)         |
+| **Dimensions**   | 50.00 × 28.00 mm                          | 84.00 × 52.00 mm                              |
 
 </details>  
 ----  
@@ -33,16 +44,6 @@ about the VSD Squadron mini and Pro Boards</summary>
 <details>
 <summary>     
 
-## Program tools and Structure    
-
-</summary>  
-
-  
-  The program is of 10 days with assignments. VSD Workshops are intense and industry focused and provides latest hardware related programs. Kunal Ghosh Sir, is the person we can reach out for any issues or information related to the program.   
-
-  ![Workshop Flow](Related%20Files/Images%20used%20for%20docs/Flow_of_the_Workshop.jpg)  
-
----  
 ### Furthermore for this workshop we have used the following tools:   
 
 - **Freedom Studio**  
