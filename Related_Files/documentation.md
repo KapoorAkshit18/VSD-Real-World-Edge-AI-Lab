@@ -153,25 +153,31 @@ cd ~/Desktop/FreedomStudio-3-1-1
 
 ```
   
-Output would be:
+Output would be:  
 
-![add a caption ](Related%20Files/Images%20used%20for%20docs/1.2.png) 
-![add a caption ](Related%20Files/Images%20used%20for%20docs/1.3.png)  
+
+![Alt text describing image](Related_Files/Images_used_for_docs/1.2.png)   
+
+![Alt text describing image](Related_Files/Images_used_for_docs/1.3.png)    
+
  
 6. After that I click on vnc.html inside the webpage as seen in the fourth image just above. And click on connect.  
-
-![add a caption ](Related%20Files/Images%20used%20for%20docs/1.4.png) 
-![add a caption ](Related%20Files/Images%20used%20for%20docs/1.5.png)   
+  
+  ![Alt text describing image](Related_Files/Images_used_for_docs/1.2.png) 
+  
+  ![Alt text describing image](Related_Files/Images_used_for_docs/1.2.png) 
+  
+   
 
 7. Once the session gets connected and opened, go to the freedom studio folder present in the homepage, and open Freedom Studio from there, I had modified the workspace directory, to the default `/home/vscode/Desktop`. 
 
-![add a caption ](Related%20Files/Images%20used%20for%20docs/1.6.png)   
+![Alt text describing image](Related_Files/Images_used_for_docs/1.6.png)   
 
-![add a caption ](Related%20Files/Images%20used%20for%20docs/1.7.png)  
+![Alt text describing image](Related_Files/Images_used_for_docs/1.7.png)   
 
-8. After exploring the option select I'm done here, take me to the workbench and we will proceed with our second part of this section where we will make example project in the eclipse IDE.    
+8. After exploring the option select `I'm done here, take me to the workbench` and we will proceed with our second part of this section where we will make example project in the eclipse IDE.    
 
-![add a caption ](Related%20Files/Images%20used%20for%20docs/1.6.png)     
+![Alt text describing image](Related_Files/Images_used_for_docs/1.6.png)     
 ---
  <details>    
 
@@ -270,14 +276,32 @@ Now we want to give inputs to this model and as well as check the accuracy of it
 Technically, it means to multiply inputs by weights, adding the bias. Furthermore, to complete this forward propagation chain, we apply activation function, and get the output respectively.  
   
 For backward propagation we reduce the errors as discussed at the start.  
-<details>Learn More</details>
+<details>Learn More
 <summary>  
   If we talk about linear regression and propagation, these are distinct. First we have to know what is neural network is (AI not real human brain ones although simillar). A neural network is composed of inputs like x1 and x2 (x1  is importance of study and wx2 is importance of slee[) weight which means importance, and bias which we use to shift the result by addition or subtraction.  Now, coming back to the question of distinction, it is simply from their equation and the presence of the activation function.
  
   
   
   </summary>
-.  
+  </details> 
+
+## 🛠 Important Tips
+
+* Use **Chrome or Edge** for best VNC performance
+* Do not close the Codespace while using Freedom Studio
+* Files persist in: `/home/vscode/Desktop`
+
+---
+
+## ⚠️ Troubleshooting
+
+| Issue                    | Solution                               |
+| ------------------------ | -------------------------------------- |
+| Port 6080 not visible    | Wait 2–3 minutes and refresh Ports tab |
+| Blank noVNC screen       | Refresh browser tab                    |
+| Freedom Studio not found | Restart Codespace or rerun setup       |
+| Workspace popup repeats  | Select “Use this as default”           |
+---
 
 # Outputs Explanations:  
 
@@ -570,14 +594,14 @@ Conclusion is that this result proves that the dataset contains complex overlapp
 
 ## Key Learning Outcomes from This AI Python Lab
 
-✅ You understood:
+✅ We understood:
 
 * Difference between **classification and regression**
 * Importance of **feature scaling**
 * How **decision boundaries are formed**
 * Why different models behave differently on the same dataset
 
-✅ You visually verified:
+✅ We visually verified:
 
 * SVM = straight boundary
 * KNN = curved, data-driven boundary
