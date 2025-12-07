@@ -178,6 +178,7 @@ Output would be:
 8. After exploring the option select `I'm done here, take me to the workbench` and we will proceed with our second part of this section where we will make example project in the eclipse IDE.    
 
 ![Alt text describing image](Related_Files/Images_used_for_docs/1.6.png)     
+  
 ---
  <details>    
 
