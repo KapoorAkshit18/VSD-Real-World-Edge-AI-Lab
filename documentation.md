@@ -72,10 +72,9 @@ Challenges:
 - Low RAM and power.
 - Full control.  
   
-  <details>
-<summary>
-    
-about the VSD Squadron mini and Pro Boards</summary>  
+  
+ <details>
+<summary>About the VSD Squadron mini and Pro Boards</summary>  
   
 | Feature          | VSDSquadron Mini                         | VSDSquadron Pro                              |
 |------------------|-------------------------------------------|-----------------------------------------------|
@@ -90,13 +89,15 @@ about the VSD Squadron mini and Pro Boards</summary>
 | **Board Photo**  | ![Alt text describing image](Related_Files/Images_used_for_docs/vsd_mini.png)                                          |  ![Alt text describing image](Related_Files/Images_used_for_docs/vsd_pro.png)                         |
 
 
-</details>  
+</details>   
+
 ----   
 
 # VSD-Edge-AI-Lab Modules   
 
 <details>
 <summary>     
+Tools Used  </summary>  
 
 ### Furthermore for this workshop we have used the following tools:   
 
@@ -122,17 +123,116 @@ Freedom Studio = SiFive’s official Eclipse-based IDE for RISC-V programming an
  Programming SiFive boards such as HiFive1, HiFive Unleashed, etc.
 </li>
 
+---
+
+
+## 1. **Google Colab**
+
+**Google Colab (Colaboratory)** is a cloud-based Python development environment provided by Google that allows users to write and execute Python code directly in the browser.
+
+### Key Features
+
+* No installation required
+* Free access to **GPU and TPU**
+* Supports popular ML libraries like:
+
+  * TensorFlow
+  * PyTorch
+  * NumPy
+  * Matplotlib
+* Easy sharing of notebooks like Google Docs
+
+### Uses in AI/ML
+
+* Training machine learning models without local hardware
+* Running deep learning experiments
+* Data visualization
+* Collaborative coding for projects and research
+
+### Advantages
+
+* Fast setup and execution
+* Works on low-end devices
+* Auto-saves to Google Drive
+
+---
+
+## 2. **MNIST Dataset Resource (UCSD Page)**
+
+Source: [https://www.ccom.ucsd.edu/~cdeotte/programs/MNIST.html](https://www.ccom.ucsd.edu/~cdeotte/programs/MNIST.html)
+
+This webpage provides a **simple and educational explanation** of the **MNIST handwritten digit dataset** and how it can be used in machine learning.
+
+### What MNIST Is
+
+MNIST is a dataset of:
+
+* 70,000 grayscale images of handwritten digits (0–9)
+* Image size: **28 × 28 pixels**
+
+### What This Page Provides
+
+* Python code examples to:
+
+  * Load the MNIST dataset
+  * Visualize digits
+  * Train simple classifiers
+* Step-by-step explanation of:
+
+  * Neural networks
+  * Training logic
+  * Model evaluation
+
+### Why It’s Useful
+
+* Beginner-friendly learning resource
+* Helps understand **image classification**
+* Often used as the first dataset for deep learning projects
+
+---
+
+## 3. **Desmos**
+
+**Desmos** is an online **graphing calculator** that allows users to visualize mathematical equations and functions interactively.
+
+### Key Features
+
+* Real-time graph plotting
+* Sliders to change parameters dynamically
+* Supports:
+
+  * Linear equations
+  * Quadratic functions
+  * Trigonometric functions
+  * Inequalities
+
+### Uses in AI and ML
+
+* Visualizing:
+
+  * Linear regression lines
+  * Decision boundaries
+  * Cost functions
+  * Gradient descent behavior
+
+### Advantages
+
+* No installation required
+* Easy, visual, and interactive
+* Perfect for understanding math concepts behind ML
+
+---
 
 
 
 
+</details>  
 
-
-
-
-</details>
+##  Execution of the Program Flow  
+<details> <summary>   
+  Initial Setup
   
-##  Execution of the Program Flow
+</summary>  
 
 1. Setting Up the Environment.
 
@@ -172,39 +272,30 @@ Output would be:
 8. After exploring the option select I'm done here, take me to the workbench and we will proceed with our second part of this section where we will make example project in the eclipse IDE.    
 
 ![add a caption ](Related%20Files/Images%20used%20for%20docs/1.6.png)     
+---  
+
+ </details>    
+
+ ## 🛠 Important Tips
+
+* Use **Chrome or Edge** for best VNC performance
+* Do not close the Codespace while using Freedom Studio
+* Files persist in: `/home/vscode/Desktop`
+
 ---
- <details>    
 
- 9. Tips for Smooth Operation    
+## ⚠️ Troubleshooting
 
+| Issue                    | Solution                               |
+| ------------------------ | -------------------------------------- |
+| Port 6080 not visible    | Wait 2–3 minutes and refresh Ports tab |
+| Blank noVNC screen       | Refresh browser tab                    |
+| Freedom Studio not found | Restart Codespace or rerun setup       |
+| Workspace popup repeats  | Select “Use this as default”           |
+---
 
-* Use a Chromium-based browser (Chrome or Edge) for better VNC responsiveness.
-* Avoid closing the Codespace tab while FreedomStudio is running.
-* All files in /home/vscode/Desktop persist while the Codespace is active.
-* If the desktop view appears blank, refresh the noVNC tab once after the Codespace boots.  
-
-10. Troubleshooting     
-
-```
-# Sourced from #https://github.com/vsdip/vsd-riscv
--edgeai
-
-Issue Port 6080 does not appear	
-Solution Wait for setup to complete (~2–3 min). Refresh PORTS tab.  
-
-noVNC window is blank
-Refresh browser tab or reopen from PORTS list.  
-
-FreedomStudio not found	Run 
-setup manually or restart Codespace.  
-
-Workspace prompt reappears each time	  
-Select "Use this as default and do not ask again" before launching.</details>   
-
-
-```
 ### Regression:  
-`Tool used: Daemos`  Qwerty
+`Tool used: Desmos`  Qwerty
   
 Regression is defined as predicting a continuous value.   
 Example. Salary of a person, Age, etc.  
@@ -270,21 +361,21 @@ Now we want to give inputs to this model and as well as check the accuracy of it
 Technically, it means to multiply inputs by weights, adding the bias. Furthermore, to complete this forward propagation chain, we apply activation function, and get the output respectively.  
   
 For backward propagation we reduce the errors as discussed at the start.  
-<details>Learn More</details>
-<summary>  
+<details>
+
+<summary>    Learn More </summary>
+
   If we talk about linear regression and propagation, these are distinct. First we have to know what is neural network is (AI not real human brain ones although simillar). A neural network is composed of inputs like x1 and x2 (x1  is importance of study and wx2 is importance of slee[) weight which means importance, and bias which we use to shift the result by addition or subtraction.  Now, coming back to the question of distinction, it is simply from their equation and the presence of the activation function.
+  
+ </details>  
  
-  
-  
-  </summary>
-.  
 
 # Outputs Explanations:  
 
 
 # **AI Python Lab – Results and Analysis**
   
-  ## . Data Distribution (Scatter Plots)  
+  ## Data Distribution (Scatter Plots)  
   ![Alt text describing image](Related_Files/Images_used_for_docs/1.png) 
 
 The initial scatter plots (with values mostly between **50–100** on both axes) represent the **raw dataset before applying machine learning models**.
@@ -440,7 +531,7 @@ Conclusion is that Most predictions are correct, illustrating the robustness of 
 
 ---
 
-## 2. SVM (Support Vector Machine) – Training Set Result
+## 8. SVM (Support Vector Machine) – Training Set Result
   
   ![Alt text describing image](Related_Files/Images_used_for_docs/vi.png)  
 
@@ -470,7 +561,7 @@ The SVM model has:
 
 ---
 
-## 3. KNN Decision Boundary (Scaled Data)
+## 9. KNN Decision Boundary (Scaled Data)
  ![Alt text describing image](Related_Files/Images_used_for_docs/v.png)  
 
 
@@ -496,7 +587,7 @@ KNN:
 
 ---
 
-## 4. KNN Decision Boundary (Unscaled / Actual Values)
+## 10. KNN Decision Boundary (Unscaled / Actual Values)
   
   ![Alt text describing image](Related_Files/Images_used_for_docs/iv.png)   
 
@@ -521,7 +612,7 @@ This proves that:
 ---  
 
 
-## 5. Linear Regression Result
+## 11. Linear Regression Result
   
  ![Alt text describing image](Related_Files/Images_used_for_docs/3.png)    
 
