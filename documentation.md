@@ -673,6 +673,8 @@ Conclusion is that this result proves that the dataset contains complex overlapp
 * SVM = straight boundary
 * KNN = curved, data-driven boundary
 * Regression = best-fit straight line through noisy data
----
-   
+---  
+## References  
+[1] https://www.vlsisystemdesign.com/riscv_edgeai/   
+
   
