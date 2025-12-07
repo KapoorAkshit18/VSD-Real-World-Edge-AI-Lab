@@ -4,7 +4,57 @@
 <summary>
 About
 </summary>  
-AI to run on small devices.
+
+---
+
+# RISC-V EdgeAI Workshop (by VSD) — Summary
+
+## 🎯 What is it?
+
+The RISC-V EdgeAI Workshop is a **10-day hands-on program** focused on building and deploying neural networks and classical ML models on a **RISC-V microcontroller** (specifically the board VSDSquadron Pro) — targeting **edge / embedded AI** under strong memory constraints (16 KB RAM). ([VLSI System Design][1])
+
+Key goals:
+
+* Train models in Python (e.g. with Scikit-learn) or other ML tools. ([VLSI System Design][1])
+* Quantize & optimize those models (e.g. 8-bit quantization, pruning) for deployment on resource-constrained RISC-V MCU. ([VLSI System Design][1])
+* Deploy and run inference (e.g. digit-recognition on MNIST) on the RISC-V board — with real-time performance, memory profiling, and benchmarking. ([VLSI System Design][1])
+* Gain experience with the full pipeline: *train → quantize → deploy → benchmark → memory optimization*. ([VLSI System Design][1])
+* Build a deployable TinyML portfolio — quantized models, deployment scripts, memory/latency reports. ([VLSI System Design][1])
+
+---
+
+## 🧠 Curriculum
+
+* **ML Foundations**: Linear regression, gradient descent, training from scratch. ([VLSI System Design][1])
+* **Classical ML**: K-Nearest Neighbors (KNN), Support Vector Machines (SVM), classification tasks, decision boundary visualization. ([VLSI System Design][1])
+* **Quantization & Memory Optimization**: 8-bit quantization, weight pruning, model size reduction (e.g. compressing models down to 16 KB RAM footprint) while measuring accuracy vs memory tradeoff. ([VLSI System Design][1])
+* **Neural Networks on RISC-V**: Build simple MLPs or small neural nets, optimize for memory & latency, deploy on VSDSquadron Pro. ([VLSI System Design][1])
+* **Real-time Inference & Benchmarking**: Deploy on-device (e.g. MNIST digit recognition), measure inference latency, memory usage, stability, variations under resource constraints. ([VLSI System Design][1])
+* **End-to-End Deployment Workflow**: From Python-based model training, through quantization/compression, to embedded C/firmware deployment, with reproducible scripts and deployment templates. ([VLSI System Design][1])
+
+---
+
+## ✅ What makes this Workshop Unique / Useful
+
+* Real-world **edge-AI constraints**: Everything is optimized for **16 KB RAM** — realistic for microcontrollers/embedded devices. ([VLSI System Design][1])
+* Works with **open-source toolchains** — no reliance on proprietary hardware or closed ecosystems. ([VLSI System Design][1])
+* Provides **ready-to-deploy templates and scripts** (for quantization, conversion, deployment, memory profiling) — lowers barrier to embed ML on RISC-V MCU. ([VLSI System Design][1])
+* Produces a **portfolio** suitable for embedded/IoT / TinyML jobs: quantized models, memory-optimized deployments, benchmark reports. ([VLSI System Design][1])
+* Demonstrates feasibility of running ML/AI even in **very resource-limited environments** (as low as 16 KB RAM) — showing how edge-AI does not always need powerful hardware. ([VLSI System Design][1])
+
+
+---
+
+## 🛠️ Technologies / Tools Used in Workshop
+
+* Python + Scikit-learn (for classical ML) ([VLSI System Design][1])
+* Quantization, pruning & model compression tools / scripts (custom or open-source) for reducing model size. ([VLSI System Design][1])
+* RISC-V board: VSDSquadron Pro (SiFive-based), using open-source RISC-V toolchains. ([VLSI System Design][1])
+* Memory profiling & latency benchmarking tools to ensure deployment fits under 16 KB RAM. ([VLSI System Design][1])
+* Deployment templates from Python → C / firmware to run inference on embedded hardware. ([VLSI System Design][1])
+
+---
+
 </details>
 
   
@@ -36,17 +86,25 @@ about the VSD Squadron mini and Pro Boards</summary>
 | **Digital I/O**  | 15 GPIO Pins                              | 19 GPIO Pins                                  |
 | **PWM Pins**     | Not specified in summary (available)      | 9 PWM-capable Pins                            |
 | **IDE / Software** | PlatformIO (VSCode)                     | Freedom Studio (RISC-V GCC Toolchain)         |
-| **Dimensions**   | 50.00 × 28.00 mm                          | 84.00 × 52.00 mm                              |
+| **Dimensions**   | 50.00 × 28.00 mm                          | 84.00 × 52.00 mm                              |  
+| **Board Photo**  | ![Alt text describing image](Related_Files/Images_used_for_docs/vsd_mini.png)                                          |  ![Alt text describing image](Related_Files/Images_used_for_docs/vsd_pro.png)                         |
+
 
 </details>  
-----  
-# VSD-Real-World-Edge-AI-Lab  
+----   
+
+# VSD-Edge-AI-Lab Modules   
+
 <details>
 <summary>     
 
 ### Furthermore for this workshop we have used the following tools:   
 
-- **Freedom Studio**  
+- **Freedom Studio**    
+
+
+![Alt text describing image](Related_Files/Images_used_for_docs/freedom_studio.png)   
+
 
 Freedom Studio = SiFive’s official Eclipse-based IDE for RISC-V programming and debugging. It is tool used for our project, an Integrated Development Environment (IDE) provided by SiFive for developing software on RISC-V–based processors.    
 ✅ What Freedom Studio Includes
@@ -87,8 +145,8 @@ We used GitHub codespace for cloud based lab. The steps are simple as follows:
     4. Now find the Internet symbol within Ports and forwarded address so, to open noVNC 	   Desktop.
     5. As we step into the environment (as seen in the image below) and have opened the novnc webpage, we can add the following commands:  
 
-```
-#To change the directory to the Freedom Studio's Directory
+```  
+# To change the directory to the Freedom Studio's Directory  
 cd ~/Desktop/FreedomStudio-3-1-1
 #Opening the Freedom Studio
 ./FreedomStudio 3-1-1
@@ -156,14 +214,17 @@ We experimented learning by take few non-linear points and draw a line which fit
   
 We can minimize the error (line not falling at the points directly) by adding more points, hence for the prediction.  
   
-add image 1.8 
+![Alt text describing image](Related_Files/Images_used_for_docs/1.8.png)  
+
+Note: expected result was different than what we got as per the lecture.
+
 
 ### Lab 
 
 We will use google collab. In a abstract explanation, first we import numpy, pandas and matplot libraries.  
 
 The result was:  
-add graph image 1  
+![Alt text describing image](Related_Files/Images_used_for_docs/1.png)  
 
 ```
 class Model():         # class for the eqn of line
@@ -217,17 +278,36 @@ For backward propagation we reduce the errors as discussed at the start.
   
   </summary>
 .  
-# Outputs Explanations:  
-Here is a clear and well-structured write-up that explains **all the results** from your AI Python lab based on the plots you shared. You can directly use this in your report or lab file.
 
----
+# Outputs Explanations:  
+
 
 # **AI Python Lab – Results and Analysis**
+  
+  ## . Data Distribution (Scatter Plots)  
+  ![Alt text describing image](Related_Files/Images_used_for_docs/1.png) 
+
+The initial scatter plots (with values mostly between **50–100** on both axes) represent the **raw dataset before applying machine learning models**.
+
+### Observations:
+
+* The data points are **densely populated**, indicating a **large dataset**.
+* Inputs and outputs show **no perfect linear pattern**, meaning:
+
+  * The relationship is **noisy**
+  * A simple straight-line prediction will have **limited accuracy**
+* This justifies the use of **machine learning models instead of fixed formulas**.
+
+✅ **Conclusion:**
+The dataset is **realistic and complex**, making it suitable for testing classification and regression algorithms.
+  
 
 ## **1. Logistic Regression on Social Network Ads Dataset**
 
 ### **Scatter Plot of Age vs Estimated Salary**
-
+  
+![Alt text describing image](Related_Files/Images_used_for_docs/i.png)  
+     
 The first scatter plot visualizes the dataset used for binary classification.
 
 * **Blue points (label 0)** represent users who did *not* purchase the product.
@@ -235,14 +315,16 @@ The first scatter plot visualizes the dataset used for binary classification.
 * The **green line** represents the **decision boundary** generated by the logistic regression classifier.
 
 **Observations:**
-
 * Users with **higher salary and age** are more likely to purchase the product (cluster of red points).
 * Younger users with lower salaries mostly fall in the non-purchase category (cluster of blue points).
-* The decision boundary shows that the classifier attempts to separate the two classes linearly, though the data is not perfectly separable.
+* The decision boundary shows that the classifier attempts to separate the two classes linearly, though the data is not perfectly separable.  
+Note: The expected results is not the same as we got.
 
 ---
 
 ## **2. Confusion Matrix (Binary Classification)**
+  
+![Alt text describing image](Related_Files/Images_used_for_docs/ii.png)  
 
 The confusion matrix for the logistic regression model shows:
 
@@ -264,6 +346,8 @@ The model performs **quite well**, with only a few misclassifications. Most erro
 ---
 
 ## **3. Plain Scatter Plot of Dataset (Without Classifier)**
+  
+  ![Alt text describing image](Related_Files/Images_used_for_docs/iii.png)    
 
 This scatter plot again shows the distribution of Age and Salary, but **without the decision boundary**.
 
@@ -273,8 +357,10 @@ This scatter plot again shows the distribution of Age and Salary, but **without 
 ---
 
 ## **4. Misclassified MNIST Digits**
+  
+![Alt text describing image](Related_Files/Images_used_for_docs/d.png)     
 
-The next set of images shows **incorrect predictions** made by the neural network model trained on the MNIST dataset.
+This set of images shows **incorrect predictions** made by the neural network model trained on the MNIST dataset.
 
 Example interpretation:
 
@@ -290,7 +376,10 @@ The misclassifications usually occur on digits that are:
 
 ---
 
-## **5. Correctly Classified MNIST Digits**
+## **5. Correctly Classified MNIST Digits**  
+
+![Alt text describing image](Related_Files/Images_used_for_docs/a.png)  
+![Alt text describing image](Related_Files/Images_used_for_docs/c.png)  
 
 Another set of images shows **correctly predicted digits** with high confidence.
 
@@ -299,7 +388,9 @@ Another set of images shows **correctly predicted digits** with high confidence.
 
 ---
 
-## **6. MNIST Confusion Matrix (10-Class Classification)**
+## **6. MNIST Confusion Matrix (10-Class Classification)**  
+
+![Alt text describing image](Related_Files/Images_used_for_docs/b.png)  
 
 This 10×10 confusion matrix presents the classifier performance across all digits (0–9).
 
@@ -325,13 +416,10 @@ The final row of images shows randomly selected test digits with:
 * **True labels**
 * **Predicted labels**
 
-Most predictions are correct, illustrating the robustness of the model.
+Conclusion is that Most predictions are correct, illustrating the robustness of the model.
 
 ---
-
-# **Final Summary**
-
-Your AI Python lab demonstrates two machine learning tasks:
+  
 
 ## **A. Logistic Regression (Binary Classification)**
 
@@ -349,25 +437,12 @@ Your AI Python lab demonstrates two machine learning tasks:
 
 ---
 
-## 1. Data Distribution (Scatter Plots)
-
-The initial scatter plots (with values mostly between **50–100** on both axes) represent the **raw dataset before applying machine learning models**.
-
-### Observations:
-
-* The data points are **densely populated**, indicating a **large dataset**.
-* Inputs and outputs show **no perfect linear pattern**, meaning:
-
-  * The relationship is **noisy**
-  * A simple straight-line prediction will have **limited accuracy**
-* This justifies the use of **machine learning models instead of fixed formulas**.
-
-✅ **Conclusion:**
-The dataset is **realistic and complex**, making it suitable for testing classification and regression algorithms.
 
 ---
 
 ## 2. SVM (Support Vector Machine) – Training Set Result
+  
+  ![Alt text describing image](Related_Files/Images_used_for_docs/vi.png)  
 
 This plot shows:
 
@@ -396,6 +471,8 @@ The SVM model has:
 ---
 
 ## 3. KNN Decision Boundary (Scaled Data)
+ ![Alt text describing image](Related_Files/Images_used_for_docs/v.png)  
+
 
 This plot shows KNN classification on:
 
@@ -420,6 +497,8 @@ KNN:
 ---
 
 ## 4. KNN Decision Boundary (Unscaled / Actual Values)
+  
+  ![Alt text describing image](Related_Files/Images_used_for_docs/iv.png)   
 
 This plot shows:
 
@@ -439,9 +518,12 @@ This proves that:
 * **Feature scaling is extremely important for KNN**
 * Without scaling, distance-based models give **biased results**
 
----
+---  
+
 
 ## 5. Linear Regression Result
+  
+ ![Alt text describing image](Related_Files/Images_used_for_docs/3.png)    
 
 This plot shows:
 
@@ -463,8 +545,16 @@ Linear Regression:
 * But here:
 
   * The relationship is **weakly linear**
-  * Prediction accuracy will be **moderate to low**
+  * Prediction accuracy will be **moderate to low**  
 
+### Need for advanced classifiers:  
+  
+### Result Analysis  
+![Alt text describing image](Related_Files/Images_used_for_docs/2_image.png) 
+
+The scatter plot shows two output classes represented using red and blue colors. The distribution of both classes overlaps significantly, indicating that the dataset is non-linearly separable. Class 1 samples are mainly concentrated in the mid-to-high output range, whereas Class 0 samples are distributed across the entire range. This overlapping nature confirms that traditional threshold-based classification is not sufficient, and machine learning models are required for effective pattern recognition. The result demonstrates the need for advanced classifiers such as KNN, SVM (non-linear), or neural networks for accurate prediction.
+
+Conclusion is that this result proves that the dataset contains complex overlapping patterns that require machine learning-based classification instead of simple rule-based decision making.
 ---
 
 ## Final Overall Interpretation of AI Lab Results
