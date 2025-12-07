@@ -661,14 +661,14 @@ Conclusion is that this result proves that the dataset contains complex overlapp
 
 ## Key Learning Outcomes from This AI Python Lab
 
-✅ You understood:
+✅ We understood:
 
 * Difference between **classification and regression**
 * Importance of **feature scaling**
 * How **decision boundaries are formed**
 * Why different models behave differently on the same dataset
 
-✅ You visually verified:
+✅We visually verified:
 
 * SVM = straight boundary
 * KNN = curved, data-driven boundary
