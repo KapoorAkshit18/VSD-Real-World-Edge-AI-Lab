@@ -202,32 +202,48 @@ Output would be:
 10. Troubleshooting     
 
 ```
-#Sourced from #https://github.com/vsdip/vsd-riscv
--edgeai
+Issue: Port 6080 does not appear	
+Solution: Wait for setup to complete (~2–3 min). Refresh PORTS tab.  
 
-Issue Port 6080 does not appear	
-Solution Wait for setup to complete (~2–3 min). Refresh PORTS tab.  
+Issue: noVNC window is blank
+Solution: Refresh browser tab or reopen from PORTS list.  
 
-noVNC window is blank
-Refresh browser tab or reopen from PORTS list.  
+Issue: FreedomStudio not found	
+Solution: Run setup manually or restart Codespace.  
 
-FreedomStudio not found	Run 
-setup manually or restart Codespace.  
-
-Workspace prompt reappears each time	  
-Select "Use this as default and do not ask again" before launching.</details>   
-
-
+Issue: Workspace prompt reappears each time	  
+Solution: Select "Use this as default and do not ask again" before launching.
 ```
----  
-  
- 2. Example project on the Eclipse IDE. 
-(coming soon), feel free to explore other project related directories present here.
-  </details>
-  
+</details>   
+
+---
+
+## 2. Firmware Deployment on RISC-V (Freedom Studio & SiFive FE310)
+
+### Lab 1: Startup Profit Multiple Linear Regression (`Lab1.c`)
+Inference is deployed on the SiFive FE310-G002 core to calculate company profitability from financial inputs:
+* **Features**: R&D Spend, Administration Spend, Marketing Spend, and categorical State (California, Florida, New York).
+* **Firmware Implementation**: [Lab1.c](Related_Files/SiFive_Labs/lab%201/Lab1.c) implements both the full 6-variable model and the standard 3-variable workshop reference model.
+* **Embedded Float Printing**: Utilizes custom `print_float()` function to format floating-point results without requiring float-enabled `printf` in `newlib-nano`.
+* **Verification**:
+  - Sample 1 (New York: R&D: $165,349.20, Admin: $136,897.80, Marketing: $471,784.10)
+  - Actual Profit: **$192,261.83**
+  - Model Prediction: **$192,521.25**
+
+### Lab 2: Binary Classification (`Social_Network_Ads`)
+* Python model training: [vsd_session_2.ipynb](Related_Files/python_notebook/lab%202/vsd_session_2.ipynb)
+* Exported headers: [scaler.h](Related_Files/SiFive_Labs/lab%202/scaler.h) and [svm_model.h](Related_Files/SiFive_Labs/lab%202/svm_model.h)
+* Features scaled using `StandardScaler` ($z = (x - \mu)/\sigma$) before evaluating linear decision boundaries.
+
+### Lab 3: MNIST Digit Classification on RISC-V MCU
+* Exported headers: [svm_model.h](Related_Files/SiFive_Labs/lab%203/svm_model.h) (10 classes × 784 features) and [scaler.h](Related_Files/SiFive_Labs/lab%203/scaler.h).
+* Declared with `const` qualifiers to ensure parameters reside in the 4 MB external SPI Flash rather than overflowing the 16 KB Data SRAM limit of the FE310 SoC.
+
+---
+
 ## Acknowledgements    
 
-Kunal Ghosh Sir, Ankit Mawle Sir and Dhavanti Bhavsar Madam.  
+Special thanks to Kunal Ghosh Sir, Ankit Mawle Sir, Dhavanti Bhavsar Madam, and the VSD community for organizing this comprehensive workshop.  
 
 ---
 
